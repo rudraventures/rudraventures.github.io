@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Ventures | Power. Purpose. Progress.</title>
+    <!-- प्रीमियम लुक के लिए गूगल फोंट्स -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- आइकन लाइब्रेरी -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ब्रांड गाइडलाइंस (रंग: नेवी ब्लू, गोल्ड, चारकोल, कॉपर, सिल्वर) */
+        :root {
+            --navy-deep: #060b11;      /* अत्यंत गहरा शाही नेवी ब्लू */
+            --navy-card: #0d1b2a;      /* कार्ड्स के लिए क्लासी नेवी */
+            --gold: #d4af37;           /* शुद्ध मैटेलिक गोल्ड */
+            --gold-light: #f3e5ab;     /* हल्का चमकता हुआ गोल्ड */
+            --charcoal: #121212;       /* बैकग्राउंड चारकोल ब्लैक */
+            --copper: #b87333;         /* कॉपर एक्सेंट */
+            --silver: #cbd5e1;         /* प्रीमियम सिल्वर टेक्स्ट */
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--charcoal);
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* कस्टमाइज्ड प्रीमियम स्क्रॉलबार */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--charcoal);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        /* हेडर और नेविगेशन */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(6, 11, 17, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            z-index: 1000;
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 15px 80px;
+            background: rgba(6, 11, 17, 0.98);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        /* गोल्ड त्रिशूल लोगो डिज़ाइन (SVG) */
+        .trishul-logo-svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--gold);
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 22px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background: var(--gold);
+            color: var(--navy-deep);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* हीरो बैनर */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(13, 27, 42, 0.85) 0%, var(--charcoal) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        /* बैकग्राउंड में भव्य त्रिशूल की परछाई */
+        .hero-bg-accent {
+            position: absolute;
+            width: 35vw;
+            height: 35vw;
+            opacity: 0.025;
+            z-index: 0;
+            pointer-events: none;
+            fill: var(--gold);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+        }
+
+        .hero-tagline {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: var(--white);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.desc {
+            font-size: 20px;
+            color: #cbd5e1;
+            max-width: 750px;
+            margin: 0 auto 45px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .primary-btn {
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            color: var(--navy-deep);
+            padding: 15px 35px;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        .primary-btn:hover {
+            background: transparent;
+            color: var(--gold);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        /* कॉर्पोरेट इकोसिस्टम सेक्शन */
+        section {
+            padding: 120px 80px;
+            position: relative;
+        }
+
+        .section-header {
+            max-width: 800px;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 4px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #161e29 0%, #060b11 100%);
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 4px;
+            padding: 60px 40px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--copper));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--gold);
+            margin-bottom: 35px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .card:hover .icon-wrapper {
+            background: var(--gold);
+            color: var(--navy-deep);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .card .learn-more {
+            margin-top: auto;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .card .learn-more:hover {
+            gap: 15px;
+            color: var(--white);
+        }
+
+        /* वैलनेस रजिस्ट्रेशन फॉर्म */
+        .wellness-section {
+            background-color: #04080e;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .form-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .form-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .form-info p {
+            font-size: 17px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .features-list .icon-box {
+            color: var(--gold);
+            font-size: 22px;
+            margin-top: 3px;
+        }
+
+        .features-list h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .features-list p {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        /* प्रीमियम रजिस्ट्रेशन फॉर्म */
+        .premium-form-container {
+            background: linear-gradient(135deg, #101924 0%, #050b11 100%);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(6, 11, 17, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 20px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(6, 11, 17, 0.95);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+        }
+
+        textarea.form-control {
+            resize: none;
+            height: 110px;
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--gold);
+            color: var(--navy-deep);
+            border: none;
+            padding: 18px;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .submit-btn:hover {
+            background: var(--white);
+            color: var(--navy-deep);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+        }
+
+        /* कॉर्पोरेट क्रेडेंशियल्स */
+        .trust-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .badge-card {
+            background: rgba(13, 27, 42, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .badge-icon {
+            font-size: 45px;
+            color: var(--gold);
+        }
+
+        .badge-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .badge-card p {
+            font-size: 18px;
+            color: var(--white);
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        .trust-visual {
+            text-align: center;
+            position: relative;
+        }
+
+        .trust-visual svg {
+            width: 220px;
+            height: 220px;
+            fill: var(--gold);
+            opacity: 0.15;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.12; }
+            100% { transform: scale(1.05); opacity: 0.2; }
+        }
+
+        /* फुटर और संपर्क */
+        footer {
+            background-color: var(--navy-deep);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 100px 80px 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1.2fr;
+            gap: 80px;
+            margin-bottom: 80px;
+        }
+
+        .footer-about h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            color: #cbd5e1;
+            font-size: 16px;
+            max-width: 500px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-info-list {
+            list-style: none;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        .contact-info-list i {
+            color: var(--gold);
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-info-list a {
+            transition: var(--transition);
+        }
+
+        .contact-info-list a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #94a3b8;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* सक्सेस मोडल */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .success-modal {
+            background: #0d1b2a;
+            border: 2px solid var(--gold);
+            width: 90%;
+            max-width: 550px;
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 4px;
+            transform: scale(0.85);
+            transition: var(--transition);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-overlay.active .success-modal {
+            transform: scale(1);
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            color: var(--gold);
+            margin: 0 auto 30px;
+        }
+
+        .success-modal h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .success-modal p {
+            color: #cbd5e1;
+            font-size: 16px;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .close-modal-btn {
+            background: var(--gold);
+            color: var(--navy-deep);
+            border: none;
+            padding: 12px 35px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .close-modal-btn:hover {
+            background: var(--white);
+            color: var(--navy-deep);
+        }
+
+        /* मोबाइल रिस्पॉन्सिव */
+        @media (max-width: 1024px) {
+            header, header.scrolled {
+                padding: 20px 40px;
+            }
+            section {
+                padding: 100px 40px;
+            }
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-split, .trust-section, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .hero h1 {
+                font-size: 52px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header, header.scrolled {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            section {
+                padding: 80px 20px;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 38px;
+            }
+            .hero p.desc {
+                font-size: 16px;
+            }
+            .premium-form-container {
+                padding: 30px 20px;
+            }
+            .footer-grid {
+                gap: 40px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- हेडर एवं नेविगेशन बार -->
+    <header id="main-header">
+        <a href="#" class="logo">
+            <!-- Concept 2: Golden Trishul inline SVG Logo -->
+            <svg class="trishul-logo-svg" viewBox="0 0 24 24">
+                <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+            </svg>
+            RUDRA <span>VENTURES</span>
+        </a>
+        <div class="nav-links">
+            <a href="#ecosystem">Ecosystem</a>
+            <a href="#register">Rudra Wellness</a>
+            <a href="#trust">Compliance</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="#register" class="cta-btn">Book Session</a>
+    </header>
+
+    <!-- हीरो बैनर (Hero Section) -->
+    <div class="hero">
+        <!-- SVG background accent corresponding to Concept 2 Trishul -->
+        <svg class="hero-bg-accent" viewBox="0 0 24 24">
+            <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+        </svg>
+        <div class="hero-content">
+            <p class="hero-tagline">Power . Purpose . Progress</p>
+            <h1>BUILDING VALUE.<br>CREATING <span>LEGACIES.</span></h1>
+            <p class="desc">मध्य भारत का एक प्रीमियम बहुआयामी कोंगलोमरेट जो रियल एस्टेट, आयुष मंत्रालय द्वारा प्रमाणित वैलनेस थेरेपी और इंटरनेशनल ट्रेड को एकीकृत करता है।</p>
+            <div class="hero-buttons">
+                <a href="#ecosystem" class="primary-btn">Explore Portfolio</a>
+                <a href="#register" class="cta-btn" style="padding: 15px 35px; border-color: var(--gold); color: var(--gold);">Wellness Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- कोंगलोमरेट इकोसिस्टम सेक्शन -->
+    <section id="ecosystem">
+        <div class="section-header">
+            <span class="section-tag">Diversified Horizons</span>
+            <h2 class="section-title">The Corporate Ecosystem</h2>
+        </div>
+        <div class="grid-container">
+            <!-- कार्ड 1: रूद्र रियल्टी -->
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-building-user"></i>
+                </div>
+                <h3>Rudra Realty Group</h3>
+                <p>प्राइम लैंड बैंक डेवलपमेंट, रेजिडेंशियल एसेट्स और NH-44 के रणनीतिक व्यावसायिक कॉरिडोर पर अकल्पनीय बुनियादी ढांचे का निर्माण।</p>
+                <a href="https://rudrarealtygroup.in" target="_blank" class="learn-more">Consult desk <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <!-- कार्ड 2: रूद्र वैलनेस -->
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3>Rudra Wellness</h3>
+                <p>आयुष मंत्रालय (Ministry of AYUSH) के मानकीकृत प्रोटोकॉल के साथ जीवन को तनावमुक्त और ऊर्जावान बनाने वाले प्रामाणिक योग विज्ञान का वैश्विक केंद्र।</p>
+                <a href="#register" class="learn-more">Join Batch <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <!-- कार्ड 3: रूद्र एक्सपोर्टर्स -->
+            <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3>Rudra Exporters</h3>
+                <p>भारत की सर्वश्रेष्ठ कृषि उपज, ऑर्गेनिक वेलनेस प्रोडक्ट्स और प्रीमियम संसाधनों को वैश्विक अंतरराष्ट्रीय बाजारों से जोड़ने का प्रवेश द्वार।</p>
+                <a href="#contact" class="learn-more">Partner with us <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- वैलनेस रजिस्ट्रेशन फॉर्म सेक्शन -->
+    <section id="register" class="wellness-section">
+        <div class="form-split">
+            <div class="form-info">
+                <span class="section-tag">Global Healing Initiative</span>
+                <h3>Rudra Wellness Online Batch Enrollment</h3>
+                <p>राजीव श्रीवास्तव (प्रमाणित योग विशेषज्ञ - आयुष मंत्रालय) के मार्गदर्शन में अपने संपूर्ण स्वास्थ्य और मानसिक शांति की दिशा में पहला कदम बढ़ाएं।</p>
+                
+                <ul class="features-list">
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <h4>AYUSH Certified Yoga Protocol</h4>
+                            <p>वैज्ञानिक और चिकित्सीय रूप से जाँचे गए प्रमाणित योगासन और ध्यान अभ्यास।</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
+                        <div>
+                            <h4>Global Digital Live Batches</h4>
+                            <p>विदेशों (जैसे USA, UK, Australia) में बैठे भारतीय परिवारों के लिए सुविधाजनक शेड्यूल्स।</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-shield-heart"></i></div>
+                        <div>
+                            <h4>Holistic Stress Management</h4>
+                            <p>हृदय, रक्तचाप और मानसिक चिंता को दूर करने के लिए विशेष थेरेपी क्लासेस।</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- रजिस्ट्रेशन फॉर्म -->
+            <div class="premium-form-container">
+                <form id="wellnessForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name / पूरा नाम</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="उदा. Rajeev Shrivastava" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address / ईमेल</label>
+                        <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone / मोबाइल नंबर</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+91 96656 12595" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="batch">Preferred Session Batch / पसंदीदा बैच</label>
+                        <select id="batch" class="form-control" required>
+                            <option value="" disabled selected>बैच का चयन करें...</option>
+                            <option value="morning">Morning Awakening Yoga (06:00 AM IST)</option>
+                            <option value="evening">Corporate Stress Relief (07:00 PM IST)</option>
+                            <option value="private">One-on-One VIP Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="healthGoal">Brief Health Goals or Concerns / स्वास्थ्य लक्ष्य</label>
+                        <textarea id="healthGoal" class="form-control" placeholder="उदा. मानसिक शांति, वजन नियंत्रण, कमर दर्द में राहत..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enroll Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- कॉर्पोरेट क्रेडेंशियल सेक्शन -->
+    <section id="trust">
+        <div class="trust-section">
+            <div>
+                <span class="section-tag">Institutional Power</span>
+                <h2 class="section-title" style="margin-bottom: 30px;">Government Validated & Certified</h2>
+                <p style="color: #94a3b8; font-size: 17px; margin-bottom: 40px; line-height: 1.8;">
+                    Rudra Ventures पूर्ण रूप से भारत सरकार के कॉर्पोरेट गवर्नेंस मानदंडों और नियमों के तहत पंजीकृत और कार्यशील है।
+                </p>
+                <div class="trust-badges">
+                    <div class="badge-card">
+                        <div class="badge-icon"><i class="fa-solid fa-address-card"></i></div>
+                        <div>
+                            <h4>Ministry of MSME Registered</h4>
+                            <p>UDYAM-MP-13-0065948</p>
+                        </div>
+                    </div>
+                    <div class="badge-card">
+                        <div class="badge-icon"><i class="fa-solid fa-stamp"></i></div>
+                        <div>
+                            <h4>Yoga Certification Board Verified</h4>
+                            <p>Certificate No: P010006890 (AYUSH)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-visual">
+                <!-- Golden Shield with inner star detail -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- फुटर एवं संपर्क सेक्शन -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Rudra Ventures</h3>
+                <p>वैश्विक दृष्टिकोण के साथ भारत के हृदय स्थल (Junnardeo, Madhya Pradesh) से संचालित होने वाला एक विश्वसनीय और अकल्पनीय व्यावसायिक उद्यम।</p>
+                <p style="color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 14px; font-weight: 600;">Founder Desk: Rajeev Shrivastava</p>
+            </div>
+            <div>
+                <ul class="contact-info-list">
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:rajeev23x@gmail.com" style="color: #cbd5e1; text-decoration: none;">rajeev23x@gmail.com</a></li>
+                    <li><i class="fa-solid fa-globe"></i> <a href="https://rudraventures.in" style="color: #cbd5e1; text-decoration: none;">rudraventures.in</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+919665612595" style="color: #cbd5e1; text-decoration: none;">+91-9665612595</a></li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> 
+                        <a href="https://wa.me/919665612595" style="color:#25D366; text-decoration: none;" target="_blank">WhatsApp पर Enquire करें</a>
+                    </li>
+                    <li><i class="fa-solid fa-location-dot"></i> 58/1, Behind Police Station, Junnardeo, Chhindwara, MP - 480551</li>
+                </ul>
+            </div>
+        </div>
+        <!-- अपडेटेड कॉपीराइट फुटर बॉटम -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rudra Ventures &bull; Junnardeo, Chhindwara, MP</p>
+        </div>
+    </footer>
+
+    <!-- सक्सेस मोडल (रजिस्ट्रेशन कन्फर्मेशन बॉक्स) -->
+    <div class="modal-overlay" id="successModal">
+        <div class="success-modal">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>रजिस्ट्रेशन सफलतापूर्वक पूरा हुआ!</h3>
+            <p id="modalMessage">धन्यवाद, आपकी रिक्वेस्ट प्राप्त हो गई है। रुद्र वेंचर्स की एक्जीक्यूटिव टीम आपसे जल्द ही संपर्क करेगी।</p>
+            <button class="close-modal-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- आवश्यक जावास्क्रिप्ट लॉजिक्स -->
+    <script>
+        // हेडर स्क्रॉल इफेक्ट
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // फॉर्म सबमिट करने की विधि
+        function handleFormSubmit(event) {
+            event.preventDefault(); // पेज रीलोड रोकने के लिए
+            
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            // डायनामिक रूप से मोडल मैसेज सेट करें
+            const message = `आदरणीय <strong>${name}</strong> जी, रुद्र वैलनेस के बैच में आपकी सीट बुक करने के लिए धन्यवाद। हमारी टीम जल्द ही आपसे आपके ईमेल <strong>${email}</strong> या फोन नंबर <strong>${phone}</strong> पर संपर्क कर आवश्यक विवरण प्रदान करेगी।`;
+            
+            document.getElementById('modalMessage').innerHTML = message;
+            
+            // मोडल को प्रदर्शित करें
+            document.getElementById('successModal').classList.add('active');
+            
+            // फॉर्म रीसेट करें
+            document.getElementById('wellnessForm').reset();
+        }
+
+        // मोडल को बंद करने की विधि
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
