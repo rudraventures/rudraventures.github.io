@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Ventures | Power. Purpose. Progress.</title>
+    <meta name="description" content="Rudra Ventures - MSME Registered multi-domain business group from Junnardeo, Chhindwara, MP. Real Estate | Wellness | Exports.">
+    <meta name="keywords" content="Rudra Ventures, Rudra Realty Group, land broker Chhindwara, property MP, Junnardeo real estate, MSME registered">
+    <meta property="og:title" content="Rudra Ventures | Power. Purpose. Progress.">
+    <meta property="og:description" content="MSME Registered business group - Real Estate, Wellness, Exports from Junnardeo, MP.">
+    <meta property="og:url" content="https://rudraventures.in">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --navy-deep: #060b11;
+            --navy-card: #0d1b2a;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --charcoal: #121212;
+            --copper: #b87333;
+            --silver: #cbd5e1;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--charcoal);
+            color: #f1f5f9;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--charcoal); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            background: rgba(6, 11, 17, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212,175,55,0.15);
+            z-index: 1000;
+            padding: 18px 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 12px 70px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span { color: var(--gold); }
+
+        .trishul-logo-svg {
+            width: 30px; height: 30px;
+            fill: var(--gold);
+            filter: drop-shadow(0 0 6px rgba(212,175,55,0.5));
+            flex-shrink: 0;
+        }
+
+        nav.nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav.nav-links a {
+            color: var(--silver);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        nav.nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 1px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav.nav-links a:hover { color: var(--gold); }
+        nav.nav-links a:hover::after { width: 100%; }
+
+        .cta-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 9px 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .cta-btn:hover {
+            background: var(--gold);
+            color: var(--navy-deep);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(13,27,42,0.88) 0%, var(--charcoal) 75%);
+            border-bottom: 1px solid rgba(212,175,55,0.15);
+            overflow: hidden;
+        }
+
+        .hero-bg-accent {
+            position: absolute;
+            width: 40vw; height: 40vw;
+            max-width: 500px; max-height: 500px;
+            opacity: 0.025;
+            z-index: 0;
+            pointer-events: none;
+            fill: var(--gold);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+        }
+
+        .hero-trishul-wrap {
+            margin-bottom: 28px;
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+
+        .hero-trishul-wrap svg {
+            filter: drop-shadow(0 0 20px rgba(212,175,55,0.5));
+        }
+
+        .hero-tagline {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6.5vw, 70px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            color: var(--white);
+            text-shadow: 0 4px 24px rgba(0,0,0,0.7);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p.desc {
+            font-size: clamp(15px, 2vw, 19px);
+            color: #cbd5e1;
+            max-width: 740px;
+            margin: 0 auto 42px;
+            font-weight: 300;
+            line-height: 1.85;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            color: var(--navy-deep);
+            padding: 14px 32px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .primary-btn:hover {
+            background: transparent;
+            color: var(--gold);
+            box-shadow: 0 0 22px rgba(212,175,55,0.28);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 110px 70px;
+            position: relative;
+        }
+
+        .section-header { margin-bottom: 65px; }
+
+        .section-tag {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 3px;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(26px, 3.5vw, 40px);
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 4px solid var(--gold);
+            padding-left: 18px;
+        }
+
+        /* ===== ECOSYSTEM CARDS ===== */
+        #ecosystem { background: #0a1520; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #161e29 0%, #060b11 100%);
+            border: 1px solid rgba(212,175,55,0.08);
+            padding: 52px 36px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--copper));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212,175,55,0.3);
+            box-shadow: 0 22px 44px rgba(0,0,0,0.55);
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        .card-status {
+            position: absolute;
+            top: 16px; right: 16px;
+            font-family: 'Cinzel', serif;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            padding: 3px 9px;
+            border: 1px solid;
+            text-transform: uppercase;
+        }
+
+        .status-active { color: #4CAF50; border-color: #4CAF50; background: rgba(76,175,80,0.08); }
+        .status-soon { color: var(--copper); border-color: var(--copper); background: rgba(184,115,51,0.08); }
+
+        .icon-wrapper {
+            width: 68px; height: 68px;
+            background: rgba(212,175,55,0.05);
+            border: 1px solid rgba(212,175,55,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; color: var(--gold);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .card:hover .icon-wrapper {
+            background: var(--gold);
+            color: var(--navy-deep);
+            box-shadow: 0 0 14px rgba(212,175,55,0.3);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 19px;
+            margin-bottom: 16px;
+            color: var(--white);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.78;
+            margin-bottom: 26px;
+            flex-grow: 1;
+        }
+
+        .learn-more {
+            margin-top: auto;
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .learn-more:hover { gap: 14px; color: var(--white); }
+        .learn-more.disabled { color: var(--copper); pointer-events: none; cursor: default; }
+
+        /* ===== WELLNESS FORM SECTION ===== */
+        .wellness-section {
+            background: #04080e;
+            border-top: 1px solid rgba(212,175,55,0.1);
+            border-bottom: 1px solid rgba(212,175,55,0.1);
+        }
+
+        .form-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+        .form-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        .form-info > p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 38px;
+            line-height: 1.85;
+        }
+
+        .features-list { list-style: none; }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .icon-box {
+            color: var(--gold);
+            font-size: 20px;
+            margin-top: 3px;
+            min-width: 22px;
+        }
+
+        .features-list h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--white);
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .features-list p { color: #94a3b8; font-size: 14px; line-height: 1.7; margin: 0; }
+
+        .premium-form-container {
+            background: linear-gradient(135deg, #101924 0%, #050b11 100%);
+            border: 1px solid rgba(212,175,55,0.15);
+            padding: 46px 40px;
+            box-shadow: 0 28px 56px rgba(0,0,0,0.6);
+        }
+
+        .form-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+        }
+
+        .form-group { margin-bottom: 22px; }
+
+        .form-group label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(6,11,17,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            padding: 13px 17px;
+            color: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15px;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-control::placeholder { color: #475569; }
+
+        .form-control:focus {
+            border-color: var(--gold);
+            background: rgba(6,11,17,0.95);
+            box-shadow: 0 0 8px rgba(212,175,55,0.1);
+        }
+
+        textarea.form-control { resize: vertical; min-height: 100px; }
+
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 20px;
+            background-color: rgba(6,11,17,0.85);
+            cursor: pointer;
+        }
+
+        select.form-control option { background: #0d1b2a; }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--gold);
+            color: var(--navy-deep);
+            border: none;
+            padding: 16px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 6px;
+        }
+
+        .submit-btn:disabled {
+            background: #555;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: var(--white);
+            color: var(--navy-deep);
+        }
+
+        /* ===== TRUST SECTION ===== */
+        #trust { background: var(--charcoal); }
+
+        .trust-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 75px;
+            align-items: center;
+        }
+
+        .trust-badges { display: flex; flex-direction: column; gap: 22px; }
+
+        .badge-card {
+            background: rgba(13,27,42,0.5);
+            border: 1px solid rgba(212,175,55,0.15);
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            transition: var(--transition);
+        }
+
+        .badge-card:hover { border-color: rgba(212,175,55,0.4); }
+
+        .badge-icon { font-size: 42px; color: var(--gold); min-width: 44px; }
+
+        .badge-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .badge-card p {
+            font-size: 17px;
+            color: var(--white);
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        .trust-visual {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .trust-visual svg {
+            width: 200px; height: 200px;
+            fill: var(--gold);
+            opacity: 0.14;
+            animation: pulse 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.11; }
+            100% { transform: scale(1.06); opacity: 0.2; }
+        }
+
+        .trust-quote {
+            font-size: 19px;
+            font-style: italic;
+            color: rgba(212,175,55,0.55);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy-deep);
+            border-top: 1px solid rgba(212,175,55,0.2);
+            padding: 90px 70px 35px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1.2fr;
+            gap: 75px;
+            margin-bottom: 65px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        .footer-about > p {
+            color: #cbd5e1;
+            font-size: 16px;
+            max-width: 480px;
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+
+        .founder-tag {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .realty-box {
+            background: rgba(212,175,55,0.06);
+            border: 1px solid rgba(212,175,55,0.2);
+            padding: 20px 22px;
+            margin-top: 24px;
+        }
+
+        .realty-box p {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: rgba(212,175,55,0.6);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .realty-box a {
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .realty-box a:hover { color: var(--white); }
+
+        .contact-info-list { list-style: none; }
+
+        .contact-info-list h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .contact-info-list i {
+            color: var(--gold);
+            font-size: 16px;
+            width: 18px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .contact-info-list a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info-list a:hover { color: var(--gold); }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1.2px;
+            margin-top: 18px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover { background: #1EBA5A; transform: translateY(-2px); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #94a3b8;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .success-modal {
+            background: #0d1b2a;
+            border: 2px solid var(--gold);
+            width: 90%; max-width: 530px;
+            padding: 48px 38px;
+            text-align: center;
+            transform: scale(0.85);
+            transition: var(--transition);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.85);
+        }
+
+        .modal-overlay.active .success-modal { transform: scale(1); }
+
+        .modal-icon {
+            width: 75px; height: 75px;
+            background: rgba(212,175,55,0.1);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px; color: var(--gold);
+            margin: 0 auto 24px;
+        }
+
+        .success-modal h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            color: var(--white);
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+
+        .success-modal p {
+            color: #cbd5e1;
+            font-size: 15px;
+            margin-bottom: 28px;
+            line-height: 1.75;
+        }
+
+        .close-modal-btn {
+            background: var(--gold);
+            color: var(--navy-deep);
+            border: none;
+            padding: 12px 32px;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal-btn:hover { background: var(--white); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            header, header.scrolled { padding: 18px 32px; }
+            section { padding: 90px 32px; }
+            footer { padding: 70px 32px 28px; }
+            .grid-container { grid-template-columns: 1fr 1fr; }
+            .form-split, .trust-section, .footer-grid { grid-template-columns: 1fr; gap: 44px; }
+        }
+
+        @media (max-width: 768px) {
+            header, header.scrolled { padding: 14px 16px; }
+            nav.nav-links { display: none; }
+            section { padding: 72px 16px; }
+            footer { padding: 60px 16px 24px; }
+            .grid-container { grid-template-columns: 1fr; }
+            .premium-form-container { padding: 28px 18px; }
+            .footer-grid { gap: 32px; }
+            .footer-bottom { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+<header id="main-header">
+    <a href="#" class="logo" aria-label="Rudra Ventures Home">
+        <svg class="trishul-logo-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+        </svg>
+        RUDRA <span>VENTURES</span>
+    </a>
+    <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#register">Wellness</a>
+        <a href="#trust">Compliance</a>
+        <a href="#contact">Contact</a>
+        <a href="https://rudrarealtygroup.in" target="_blank" rel="noopener noreferrer">Realty &#8599;</a>
+    </nav>
+    <a href="#register" class="cta-btn">Book Session</a>
+</header>
+
+<main>
+<section class="hero" aria-label="Hero Banner">
+    <svg class="hero-bg-accent" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+    </svg>
+
+    <div class="hero-content">
+        <div class="hero-trishul-wrap" aria-hidden="true">
+            <svg width="85" height="115" viewBox="0 0 85 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F0D060"/>
+                        <stop offset="50%" stop-color="#D4AF37"/>
+                        <stop offset="100%" stop-color="#B8860B"/>
+                    </linearGradient>
+                </defs>
+                <rect x="39.5" y="22" width="6" height="66" rx="2" fill="url(#tg)"/>
+                <path d="M42.5 2L39 20L42.5 13L46 20Z" fill="url(#tg)"/>
+                <path d="M18 8L16 22L19.5 18L23 22L28 36L40 29V22L28 15Z" fill="url(#tg)"/>
+                <path d="M67 8L69 22L65.5 18L62 22L57 36L45 29V22L57 15Z" fill="url(#tg)"/>
+                <rect x="36" y="52" width="11" height="3" rx="1.5" fill="url(#tg)"/>
+                <rect x="34" y="61" width="17" height="3" rx="1.5" fill="url(#tg)"/>
+                <rect x="40" y="88" width="5" height="18" rx="2" fill="url(#tg)"/>
+                <ellipse cx="42.5" cy="108" rx="11" ry="4" fill="url(#tg)" opacity="0.5"/>
+            </svg>
+        </div>
+
+        <p class="hero-tagline">Power &nbsp;&#183;&nbsp; Purpose &nbsp;&#183;&nbsp; Progress</p>
+        <h1>BUILDING VALUE.<br>CREATING <span>LEGACIES.</span></h1>
+        <p class="desc">मध्य भारत का एक प्रीमियम बहुआयामी उद्यम जो रियल एस्टेट, आयुष मंत्रालय द्वारा प्रमाणित वेलनेस थेरेपी और अंतर्राष्ट्रीय व्यापार को एकीकृत करता है।</p>
+        <div class="hero-buttons">
+            <a href="https://rudrarealtygroup.in" target="_blank" rel="noopener noreferrer" class="primary-btn">
+                <i class="fa-solid fa-building-user" aria-hidden="true"></i>&nbsp; Rudra Realty Group
+            </a>
+            <a href="#ecosystem" class="cta-btn" style="padding:14px 32px;">Explore Portfolio</a>
+        </div>
+    </div>
+</section>
+
+<section id="ecosystem">
+    <div class="section-header">
+        <span class="section-tag">Diversified Horizons</span>
+        <h2 class="section-title">The Corporate Ecosystem</h2>
+    </div>
+    <div class="grid-container">
+
+        <div class="card">
+            <span class="card-status status-active">Active</span>
+            <div class="icon-wrapper" aria-hidden="true"><i class="fa-solid fa-building-user"></i></div>
+            <h3>Rudra Realty Group</h3>
+            <p>MSME-पंजीकृत भूमि दलाली फर्म &mdash; कृषि भूमि, NH-44 व्यावसायिक कॉरिडोर और निवेश संपत्तियों में विशेषज्ञता। Chhindwara, Seoni, Rewa और Nagpur क्षेत्र में सक्रिय।</p>
+            <a href="https://rudrarealtygroup.in" target="_blank" rel="noopener noreferrer" class="learn-more">
+                Visit Website <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <span class="card-status status-active">Active</span>
+            <div class="icon-wrapper" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3>Rudra Wellness</h3>
+            <p>आयुष मंत्रालय (Ministry of AYUSH), भारत सरकार द्वारा प्रमाणित योग प्रोटोकॉल प्रशिक्षक। जीवन को तनावमुक्त और ऊर्जावान बनाने वाले प्रामाणिक योग विज्ञान का केंद्र।</p>
+            <a href="#register" class="learn-more">
+                Join Batch <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="card">
+            <span class="card-status status-soon">Coming Soon</span>
+            <div class="icon-wrapper" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
+            <h3>Rudra Exporters</h3>
+            <p>मध्यप्रदेश की सर्वश्रेष्ठ कृषि उपज, ऑर्गेनिक वेलनेस प्रोडक्ट्स और प्रीमियम संसाधनों को वैश्विक अंतर्राष्ट्रीय बाजारों से जोड़ने का प्रवेश द्वार।</p>
+            <span class="learn-more disabled">Launching Soon</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="register" class="wellness-section">
+    <div class="section-header">
+        <span class="section-tag">Global Healing Initiative</span>
+        <h2 class="section-title">Rudra Wellness</h2>
+    </div>
+    <div class="form-split">
+        <div class="form-info">
+            <h3>Online Batch Enrollment</h3>
+            <p>राजीव श्रीवास्तव (प्रमाणित योग विशेषज्ञ &mdash; आयुष मंत्रालय, Certificate No: P010006890) के मार्गदर्शन में संपूर्ण स्वास्थ्य और मानसिक शांति की दिशा में पहला कदम बढ़ाएं।</p>
+            <ul class="features-list">
+                <li>
+                    <div class="icon-box"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                    <div>
+                        <h4>AYUSH Certified Yoga Protocol</h4>
+                        <p>वैज्ञानिक और चिकित्सीय रूप से जाँचे गए प्रमाणित योगासन और ध्यान अभ्यास।</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box"><i class="fa-solid fa-laptop-medical" aria-hidden="true"></i></div>
+                    <div>
+                        <h4>Global Digital Live Batches</h4>
+                        <p>विदेशों (USA, UK, Australia) में बैठे भारतीय परिवारों के लिए सुविधाजनक शेड्यूल्स।</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+                    <div>
+                        <h4>Holistic Stress Management</h4>
+                        <p>हृदय, रक्तचाप और मानसिक चिंता को दूर करने के लिए विशेष थेरेपी क्लासेस।</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="premium-form-container">
+            <p class="form-heading">Register for a Session</p>
+            <form id="wellnessForm" action="https://formspree.io/f/xwvzygaq" method="POST" onsubmit="handleFormSubmit(event)" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name / पूरा नाम *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control" placeholder="उदा. Rajeev Shrivastava" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email / ईमेल *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile / मोबाइल *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="batch">Preferred Batch / पसंदीदा बैच *</label>
+                    <select id="batch" name="batch" class="form-control" required>
+                        <option value="" disabled selected>बैच का चयन करें...</option>
+                        <option value="morning">Morning Awakening Yoga (06:00 AM IST)</option>
+                        <option value="evening">Corporate Stress Relief (07:00 PM IST)</option>
+                        <option value="private">One-on-One VIP Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="healthGoal">Health Goals / स्वास्थ्य लक्ष्य</label>
+                    <textarea id="healthGoal" name="healthGoal" class="form-control" placeholder="उदा. मानसिक शांति, वजन नियंत्रण, कमर दर्द में राहत..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>&nbsp; Enroll Now
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="trust">
+    <div class="section-header">
+        <span class="section-tag">Institutional Power</span>
+        <h2 class="section-title">Government Validated &amp; Certified</h2>
+    </div>
+    <div class="trust-section">
+        <div>
+            <p style="color:#94a3b8;font-size:16px;margin-bottom:35px;line-height:1.85;">
+                Rudra Ventures पूर्ण रूप से भारत सरकार के कॉर्पोरेट गवर्नेंस मानदंडों और नियमों के तहत पंजीकृत और कार्यशील है।
+            </p>
+            <div class="trust-badges">
+                <div class="badge-card">
+                    <div class="badge-icon" aria-hidden="true"><i class="fa-solid fa-address-card"></i></div>
+                    <div>
+                        <h4>Ministry of MSME &mdash; Registered</h4>
+                        <p>UDYAM-MP-13-0065948</p>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon" aria-hidden="true"><i class="fa-solid fa-stamp"></i></div>
+                    <div>
+                        <h4>Yoga Certification Board Verified</h4>
+                        <p>Certificate No: P010006890 (AYUSH)</p>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-icon" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div>
+                        <h4>MSME Registration Date</h4>
+                        <p>04 / 05 / 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trust-visual">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12,2A1,1 0 0,1 13,3V6.2C16.36,6.67 19,9.5 19,13H21A1,1 0 0,1 22,14A1,1 0 0,1 21,15H19V17H17V15H13V19H15A1,1 0 0,1 16,20A1,1 0 0,1 15,21H9A1,1 0 0,1 8,20A1,1 0 0,1 9,19H11V15H7V17H5V15H3A1,1 0 0,1 2,14A1,1 0 0,1 3,13H5C5,9.5 7.64,6.67 11,6.2V3A1,1 0 0,1 12,2M12,8A1,1 0 0,0 11,9V13H13V9A1,1 0 0,0 12,8Z"/>
+            </svg>
+            <p class="trust-quote">"विश्वास। पारदर्शिता। परिणाम।"</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-grid">
+        <div class="footer-about">
+            <span class="footer-logo">RUDRA VENTURES</span>
+            <p>वैश्विक दृष्टिकोण के साथ भारत के हृदय स्थल जुन्नारदेव, छिंदवाड़ा, मध्यप्रदेश से संचालित एक विश्वसनीय बहुआयामी व्यावसायिक उद्यम।</p>
+            <p class="founder-tag">Founder: Rajeev Shrivastava</p>
+            <div class="realty-box">
+                <p>Primary Business Division</p>
+                <a href="https://rudrarealtygroup.in" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>&nbsp; rudrarealtygroup.in
+                </a>
+            </div>
+        </div>
+        <div>
+            <ul class="contact-info-list">
+                <h4>Get In Touch</h4>
+                <li>
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <span>56/1, Behind Police Station, New Colony,<br>Junnardeo, Chhindwara, MP&nbsp;480551</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    <a href="tel:+919665612595">+91-9665612595</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:rajeev23x@gmail.com">rajeev23x@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    <a href="https://rudraventures.in">rudraventures.in</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                    <span>Mon&ndash;Sat: 9:00 AM &ndash; 6:00 PM<br>Sunday: By Appointment</span>
+                </li>
+            </ul>
+            <a href="https://wa.me/919665612595?text=नमस्ते%20Rudra%20Ventures%2C%20मुझे%20जानकारी%20चाहिए" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp पर Enquire करें
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Rudra Ventures &bull; Junnardeo, Chhindwara, Madhya Pradesh &bull; UDYAM-MP-13-0065948</p>
+    </div>
+</footer>
+</main>
+
+<div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="success-modal">
+        <div class="modal-icon" aria-hidden="true">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 id="modalTitle">रजिस्ट्रेशन सफलतापूर्वक पूरा हुआ!</h3>
+        <p id="modalMessage">धन्यवाद, आपकी रिक्वेस्ट प्राप्त हो गई है। Rudra Wellness की टीम जल्द ही संपर्क करेगी।</p>
+        <button class="close-modal-btn" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script>
+    // Header scroll effect
+    const mainHeader = document.getElementById('main-header');
+    window.addEventListener('scroll', function () {
+        mainHeader.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // Form submit AJAX Handling
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const form = document.getElementById('wellnessForm');
+        const name = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const batch = document.getElementById('batch').value;
+
+        if (!name || !email || !phone || !batch) {
+            alert('कृपया सभी आवश्यक (*) fields भरें।');
+            return;
+        }
+
+        // Disable submit button during submission
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> कृपया प्रतीक्षा करें...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+
+        // Submit to Formspree securely using fetch API
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show personalized dynamic success text inside the popup
+                const msg = `आदरणीय <strong>${name}</strong> जी, Rudra Wellness के बैच में आपकी सीट बुक हो गई है! हमारी टीम जल्द ही <strong>${email}</strong> या <strong>${phone}</strong> पर संपर्क करेगी।`;
+                document.getElementById('modalMessage').innerHTML = msg;
+                document.getElementById('successModal').classList.add('active');
+                form.reset();
+            } else {
+                alert('ओह! फॉर्म सबमिट करने में कोई तकनीकी समस्या आई। कृपया बाद में प्रयास करें।');
+            }
+        })
+        .catch(error => {
+            alert('नेटवर्क एरर! कृपया अपना इंटरनेट कनेक्शन चेक करें।');
+        })
+        .finally(() => {
+            // Restore button state
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    }
+
+    function closeModal() {
+        document.getElementById('successModal').classList.remove('active');
+    }
+
+    // Close on backdrop click
+    document.getElementById('successModal').addEventListener('click', function (e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+    });
+</script>
+</body>
+</html>
