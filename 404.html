@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-view="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1F0000">
+<meta name="robots" content="noindex">
+<title>Page not found | Rudra Ventures Group</title>
+<link rel="icon" type="image/png" href="/assets/RVG_Emblem_512px_transparent.png">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/rvg.css">
+<style>
+  .top-inner { justify-content: space-between; }
+  main { text-align: center; padding-top: 56px; }
+  main ul { list-style: none; padding: 0; margin: 22px 0 0; }
+  main li { margin: 10px 0; font-size: 1.05rem; }
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="/"><picture><source srcset="/assets/RVG_Emblem_512px_web.webp" type="image/webp"><img src="/assets/RVG_Emblem_1024px_transparent.png" alt="" width="1024" height="1024"></picture><span>RUDRA VENTURES GROUP</span></a>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">English</button><button type="button" data-l="hi">हिंदी</button></div>
+</div></header>
+<main>
+<section data-lang-block="en" lang="en">
+  <h1>Page not found</h1>
+  <p class="lead">The page you are looking for is not here. It may have moved, or the address may be mistyped.</p>
+  <ul>
+    <li><a href="/">Rudra Ventures Group</a></li>
+    <li><a href="/realty/">Rudra Realty Group</a></li>
+    <li><a href="/wellness/">Rudra Wellness Group</a></li>
+    <li><a href="/udyam/">Udyam registration</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+  </ul>
+</section>
+<section data-lang-block="hi" lang="hi">
+  <h1>पृष्ठ उपलब्ध नहीं</h1>
+  <p class="lead">जिस पृष्ठ को आप खोज रहे हैं, वह यहाँ नहीं है। सम्भव है वह स्थानांतरित हो गया हो, अथवा पता टंकित करने में त्रुटि हुई हो।</p>
+  <ul>
+    <li><a href="/">Rudra Ventures Group</a></li>
+    <li><a href="/realty/">Rudra Realty Group</a></li>
+    <li><a href="/wellness/">Rudra Wellness Group</a></li>
+    <li><a href="/udyam/">Udyam पंजीयन</a></li>
+    <li><a href="/privacy/">गोपनीयता</a></li>
+  </ul>
+</section>
+</main>
+<footer>
+  <p>Rudra Ventures Group | Proprietorship | <span class="num">UDYAM-MP-13-0065948</span></p>
+  <p><a href="tel:+919665612595"><span class="num">+91 96656 12595</span></a> · <a href="mailto:info@rudraventures.in">info@rudraventures.in</a> · <a href="/">rudraventures.in</a></p>
+</footer>
+<script>
+(function(){
+  var root=document.documentElement,pick='en';
+  try{var s=localStorage.getItem('rvg-lang');if(s==='hi'||s==='en')pick=s;}catch(e){}
+  function set(l){root.setAttribute('data-view',l);root.lang=l;
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false')});
+    try{localStorage.setItem('rvg-lang',l)}catch(e){}}
+  set(pick);
+  document.addEventListener('click',function(e){var b=e.target.closest('.lang button');if(b)set(b.dataset.l)});
+})();
+</script>
+</body>
+</html>
