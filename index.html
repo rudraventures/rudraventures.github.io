@@ -221,6 +221,10 @@
   .quals{margin:0;padding-left:1.1em}
   .quals li{margin:4px 0;line-height:1.6}
   .note-in{margin-top:12px!important;font-style:italic;color:#5a4a2a}
+  /* Devanagari shaping */
+  [data-lang-block="hi"],[lang="hi"],html[data-view="hi"] body{font-family:var(--deva)}
+  [data-lang-block="hi"] *,[lang="hi"] *,[data-lang-block="hi"],[lang="hi"],html[data-view="hi"] h1,html[data-view="hi"] h2,html[data-view="hi"] h3,html[data-view="hi"] .brand,html[data-view="hi"] .pillar h3{letter-spacing:0!important;font-feature-settings:normal;font-variant-ligatures:normal}
+  [data-lang-block="hi"] .num,[lang="hi"] .num{font-family:var(--num)}
 </style>
 </head>
 <body>
