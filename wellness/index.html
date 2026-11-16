@@ -70,9 +70,11 @@
   .enq-btns button{font:inherit;font-weight:600;padding:10px 16px;border:1px solid var(--gold-deep);cursor:pointer}
   .e-wa{background:var(--field);color:var(--gold-light)} .e-em{background:#fff;color:var(--field)}
   @media (max-width:560px){.enq-row{grid-template-columns:1fr}}
+  /* Devanagari has no true italic (Core §9.4): never slant Hindi text */
+  [data-lang-block="hi"],[data-lang-block="hi"] *,[lang="hi"],[lang="hi"] *{font-style:normal!important}
 </style>
 <title>Rudra Wellness Group | A Unit of Rudra Ventures Group</title>
-<meta name="description" content="Rudra Wellness Group — yoga wellness consultation by a Yoga Instructor (NSQF Level 4, Grade A, QP BWS/Q2201), a unit of Rudra Ventures Group, UDYAM-MP-13-0065948. Junnardeo, Chhindwara, Madhya Pradesh.">
+<meta name="description" content="Rudra Wellness Group — individual yoga guidance by a Yoga Instructor (NSQF Level 4, Grade A, QP BWS/Q2201), a unit of Rudra Ventures Group, UDYAM-MP-13-0065948. Junnardeo, Chhindwara, Madhya Pradesh.">
 <meta name="author" content="Rajeev Shrivastava">
 <link rel="canonical" href="https://rudraventures.in/wellness/">
 <meta property="og:title" content="Rudra Wellness Group">
@@ -100,8 +102,8 @@
   <h2>Yoga for health</h2>
   <p>Yoga is practised across the world for health — of the body, the mind and the spirit. Rudra Wellness Group teaches it in that spirit: as a practice for keeping well, not as a treatment for illness.</p>
 
-  <h2>How consultation works</h2>
-  <p>Rudra Wellness Group offers individual yoga wellness consultation. The aim is not to hold ongoing classes, but to give you a practice you can carry out yourself:</p>
+  <h2>How the guidance works</h2>
+  <p>Rudra Wellness Group offers individual yoga guidance. The aim is not to hold ongoing classes, but to give you a practice you can carry out yourself. You are told clearly which asanas, pranayama and meditation practices suit you, and which to avoid; your physician's restrictions always come first. The guidance proceeds in these steps:</p>
   <ol>
     <li>An assessment before practice begins</li>
     <li>A practice plan made for you</li>
@@ -116,8 +118,8 @@
   <h2>Before the first consultation</h2>
   <p>The first consultation takes place only after you provide clearance from your physician, or declare in writing that you have no active illness. If you take any medication, are recovering from surgery, are pregnant or have an injury, please say so at the assessment: some practices are unsuitable in such conditions, and your plan is made to avoid them.</p>
 
-  <h2>What this consultation is, and is not</h2>
-  <p>Rudra Wellness Group offers yoga wellness consultation (NSQF Level <span class="num">4</span>, QP BWS/Q<span class="num">2201</span>). This is not medical treatment. No illness is diagnosed, treated or prevented here. For any decision about your medical care, medicines or diet, please consult your physician. This consultation does not take its place.</p>
+  <h2>What this guidance is, and is not</h2>
+  <p>Rudra Wellness Group offers individual yoga guidance — Yoga Instructor, NSQF Level <span class="num">4</span> (QP BWS/Q<span class="num">2201</span>). This is yoga instruction for health promotion, not medical treatment. No illness is diagnosed, treated or prevented here, and the assessment before practice is not a diagnosis. For every decision about medical care, medicines or diet, please consult your physician. Yoga practice can go alongside medical treatment, not in its place.</p>
   <p>Only the general principles of yogic diet are discussed. A diet for your particular condition should come from your physician or a dietitian.</p>
 
   <h2>Background</h2>
@@ -140,7 +142,7 @@
   </details>
   <details>
     <summary>What should I bring, and what should I wear?</summary>
-    <p>A yoga mat if you have one, loose clothing you can move in, and water. Come on an empty or light stomach.</p>
+    <p>A yoga mat if you have one, loose clothing you can move in, and water. Keep your stomach light; if you take any medicine, keep your mealtimes as your physician advises.</p>
   </details>
   <details>
     <summary>How long does a meeting take?</summary>
@@ -187,8 +189,8 @@
   <h2>स्वास्थ्य हेतु योग</h2>
   <p>योग सम्पूर्ण विश्व में स्वास्थ्य के लिए किया जाता है — शरीर, मन एवं आत्मा, तीनों के स्तर पर। Rudra Wellness Group इसे इसी भाव से सिखाता है: स्वस्थ बने रहने के अभ्यास के रूप में, रोग के उपचार के रूप में नहीं।</p>
 
-  <h2>परामर्श की पद्धति</h2>
-  <p>Rudra Wellness Group व्यक्तिगत योग-कल्याण परामर्श देता है। उद्देश्य निरन्तर कक्षा चलाना नहीं, अपितु आपको ऐसा अभ्यास देना है जिसे आप स्वयं कर सकें:</p>
+  <h2>मार्गदर्शन की पद्धति</h2>
+  <p>Rudra Wellness Group व्यक्तिगत योग-मार्गदर्शन देता है। उद्देश्य निरन्तर कक्षा चलाना नहीं, अपितु आपको ऐसा अभ्यास देना है जिसे आप स्वयं कर सकें। कौन-से आसन, प्राणायाम एवं ध्यान-अभ्यास आपके लिए उपयुक्त हैं, और किनसे बचना आवश्यक है, यह आपको स्पष्ट बताया जाता है — इसमें आपके चिकित्सक के बताए निषेध सर्वोपरि रहते हैं। मार्गदर्शन इन चरणों में होता है:</p>
   <ol>
     <li>अभ्यास-पूर्व मूल्यांकन</li>
     <li>आपके लिए अभ्यास-योजना</li>
@@ -203,8 +205,8 @@
   <h2>प्रथम परामर्श से पूर्व</h2>
   <p>प्रथम परामर्श तभी होता है जब आप अपने चिकित्सक की अनुमति प्रस्तुत करें, अथवा लिखित रूप से घोषित करें कि आपको कोई सक्रिय रोग नहीं है। यदि आप कोई औषधि ले रहे हैं, कुछ समय पूर्व शल्यक्रिया हुई है, गर्भावस्था है अथवा कोई चोट है, तो मूल्यांकन के समय अवश्य बताएँ — ऐसी स्थितियों में कुछ अभ्यास अनुपयुक्त होते हैं, और आपकी योजना उन्हें छोड़कर बनाई जाती है।</p>
 
-  <h2>यह परामर्श क्या है, और क्या नहीं</h2>
-  <p>Rudra Wellness Group योग-कल्याण परामर्श देता है (NSQF Level <span class="num">4</span>, QP BWS/Q<span class="num">2201</span>)। यह चिकित्सा नहीं है। यहाँ किसी रोग का निदान, उपचार अथवा निवारण नहीं किया जाता। आपकी चिकित्सा, औषधि अथवा आहार-सम्बंधी किसी भी निर्णय हेतु अपने चिकित्सक से परामर्श लें। यह परामर्श उसका स्थान नहीं लेता।</p>
+  <h2>यह मार्गदर्शन क्या है, और क्या नहीं</h2>
+  <p>Rudra Wellness Group व्यक्तिगत योग-मार्गदर्शन देता है — Yoga Instructor, NSQF Level <span class="num">4</span> (QP BWS/Q<span class="num">2201</span>)। यह स्वास्थ्य-संवर्धन हेतु योग-शिक्षण है, चिकित्सा नहीं। यहाँ किसी रोग का निदान, उपचार अथवा निवारण नहीं किया जाता, और अभ्यास-पूर्व मूल्यांकन रोग-निदान नहीं है। चिकित्सा, औषधि अथवा आहार-सम्बन्धी प्रत्येक निर्णय हेतु अपने चिकित्सक से परामर्श लें। योगाभ्यास चिकित्सकीय उपचार के साथ हो सकता है, उसके स्थान पर नहीं।</p>
   <p>यहाँ केवल योगिक आहार के सामान्य सिद्धांतों की चर्चा होती है। आपकी विशेष स्थिति हेतु आहार आपके चिकित्सक अथवा आहार-विशेषज्ञ से ही लें।</p>
 
   <h2>पृष्ठभूमि</h2>
@@ -213,7 +215,7 @@
   <h2>आरम्भ कैसे करें</h2>
   <ol>
     <li>दूरभाष, WhatsApp अथवा email से सम्पर्क करें और बताएँ कि आप क्या चाहते हैं।</li>
-    <li>हम बताते हैं कि यह मार्गदर्शन आपकी आवश्यकता के अनुकूल है या नहीं, और उसमें क्या सम्मिलित होगा।</li>
+    <li>हम बताते हैं कि यह मार्गदर्शन आपकी आवश्यकता के अनुकूल है अथवा नहीं, और उसमें क्या सम्मिलित होगा।</li>
     <li>प्रथम भेंट पर चिकित्सक की अनुमति अथवा अपनी लिखित घोषणा साथ लाएँ।</li>
     <li>मार्गदर्शन की सीमा एवं शुल्क अभ्यास आरम्भ होने से पूर्व निर्धारित कर लिए जाते हैं।</li>
     <li>आपसे कोई अभिलेख लेने से पूर्व उसकी लिखित सूचना दी जाती है।</li>
@@ -227,7 +229,7 @@
   </details>
   <details>
     <summary>क्या साथ लाएँ, और कैसे वस्त्र पहनें?</summary>
-    <p>योगाभ्यास की चटाई हो तो साथ लाएँ, ऐसे ढीले वस्त्र जिनमें सुगमता से गति हो, तथा जल। उदर खाली अथवा हल्का रखें।</p>
+    <p>योगाभ्यास की चटाई हो तो साथ लाएँ, ऐसे ढीले वस्त्र जिनमें सुगमता से गति हो, तथा जल। उदर हल्का रखें; यदि आप कोई औषधि लेते हैं, तो भोजन का समय अपने चिकित्सक के निर्देश के अनुसार ही रखें।</p>
   </details>
   <details>
     <summary>एक भेंट में कितना समय लगता है?</summary>
@@ -285,10 +287,10 @@
   <a href="tel:+919665612595" aria-label="Call +91 96656 12595">
     <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#B67A1A" stroke-width="2"/><path d="M15.2 11.5l2.6-.4 1.6 4.3-1.9 1.4c.9 2 2.4 3.6 4.4 4.6l1.5-1.8 4.2 1.8-.5 2.6c-.2.8-1 1.3-1.8 1.2-6.2-.8-11-5.7-11.6-11.9-.1-.8.5-1.6 1.5-1.8z" fill="#B67A1A"/></svg>
     <span class="num">+91 96656 12595</span></a>
-  <a href="https://wa.me/919665612595?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AF%E0%A5%8B%E0%A4%97-%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6%20%28Rudra%20Wellness%20Group%29%20%E0%A4%95%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%A4%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4" rel="noopener">
+  <a href="https://wa.me/919665612595?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AF%E0%A5%8B%E0%A4%97-%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%B6%E0%A4%A8%20%28Rudra%20Wellness%20Group%29%20%E0%A4%95%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%A4%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4" rel="noopener">
     <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#B67A1A" stroke-width="2"/><path d="M13.6 26.4l-1.1 4 4.1-1.1a9 9 0 103.4-16.1 9 9 0 00-6.4 13.2z" fill="none" stroke="#B67A1A" stroke-width="1.8"/><path d="M17.6 17.1l1.3 2.7-1 .9c.7 1.4 1.7 2.4 3.1 3.1l.9-1 2.7 1.3" fill="none" stroke="#B67A1A" stroke-width="1.6"/></svg>
     <span>WhatsApp</span></a>
-  <a href="mailto:care@rudraventures.in?subject=%E0%A4%AF%E0%A5%8B%E0%A4%97-%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6">
+  <a href="mailto:care@rudraventures.in?subject=%E0%A4%AF%E0%A5%8B%E0%A4%97-%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%B6%E0%A4%A8">
     <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#B67A1A" stroke-width="2"/><rect x="11" y="14" width="18" height="12" rx="1" fill="none" stroke="#B67A1A" stroke-width="1.8"/><path d="M11.5 14.8L20 21l8.5-6.2" fill="none" stroke="#B67A1A" stroke-width="1.8"/></svg>
     <span>care@rudraventures.in</span></a>
 </div></div>

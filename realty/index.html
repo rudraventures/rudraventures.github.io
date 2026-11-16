@@ -73,6 +73,8 @@
   .enq-btns button{font:inherit;font-weight:600;padding:10px 16px;border:1px solid var(--gold-deep);cursor:pointer}
   .e-wa{background:var(--field);color:var(--gold-light)} .e-em{background:#fff;color:var(--field)}
   @media (max-width:560px){.enq-row{grid-template-columns:1fr}}
+  /* Devanagari has no true italic (Core §9.4): never slant Hindi text */
+  [data-lang-block="hi"],[data-lang-block="hi"] *,[lang="hi"],[lang="hi"] *{font-style:normal!important}
 </style>
 <title>Rudra Realty Group | A Unit of Rudra Ventures Group</title>
 <meta name="description" content="Rudra Realty Group — Strategic Realty Consultancy (NIC 68200), a unit of Rudra Ventures Group, UDYAM-MP-13-0065948. Junnardeo, Chhindwara, Madhya Pradesh.">
@@ -103,8 +105,8 @@
 <section data-lang-block="en" lang="en">
   <h2>How we work</h2>
   <p>Rudra Realty Group is a strategic realty consultancy. We work on a Documentation-First basis: the records of a property are examined before any decision is taken on it.</p>
-  <p>Our principle is simple — <em>title first, transfer second</em>. Until the title of a piece of land is clear and undisputed, we do not take its transfer forward.</p>
-  <p>In the Sanatan tradition, land is revered as a mother — “The Earth is my mother, and I am her son,” says the Atharvaveda. We therefore do not speak of selling land, or of striking a deal over it. We speak of its transfer: from one owner to the next, with its title clear.</p>
+  <p>Our principle is simple — <em>title first, transfer second</em>. We take the transfer of a piece of land forward only when, following our set stages, its available records have been examined and verified with official sources, and no ambiguity, discrepancy or unresolved question remains within the scope of that examination.</p>
+  <p>In the Sanatan tradition, land is revered as a mother — “The Earth is my mother, and I am her son,” says the Atharvaveda. We therefore do not speak of selling land, or of striking a deal over it. We speak of its transfer: from the landowner to the prospective owner.</p>
 
   <h2>Where we can help</h2>
   <ul>
@@ -118,14 +120,14 @@
 
   <h3>Land owner</h3>
   <ul>
-    <li>No prospective owner is introduced until the title is clear.</li>
+    <li>Before a Mandate, your name, the area of the land and the co-holders' entries are matched on the MP Bhulekh portal.</li>
     <li>Your contact details are not passed directly to a prospective owner.</li>
     <li>If the land has already been shown to others, a Mandate is still possible; earlier contacts are recorded and settled in writing at the start.</li>
   </ul>
 
   <h3>Prospective owner</h3>
   <ul>
-    <li>Land is placed before you only after its records have been examined.</li>
+    <li>Before land is placed before you, an initial match of its ownership entries is made; the detailed examination of records follows your consent. You are told clearly what has been examined and what remains.</li>
     <li>Records are checked against the MP Bhulekh portal and the issuing office.</li>
     <li>See “Records to check” below for your situation.</li>
   </ul>
@@ -243,7 +245,7 @@
   </details>
   <details>
     <summary>What if something is missing in my records?</summary>
-    <p>The gap is identified first. No prospective owner is introduced until the position is clear — this protects you; it is not an obstacle.</p>
+    <p>The gap is identified first, and the next step is decided by it — this protects you; it is not an obstacle.</p>
   </details>
 
   <p class="faq-group">Process</p>
@@ -293,8 +295,8 @@
 <section data-lang-block="hi" lang="hi">
   <h2>कार्य-पद्धति</h2>
   <p>Rudra Realty Group एक Strategic Realty Consultancy है। हमारा कार्य Documentation-First आधार पर होता है — किसी सम्पत्ति पर कोई निर्णय लेने से पूर्व उसके अभिलेखों का परीक्षण किया जाता है।</p>
-  <p>हमारा सिद्धांत सरल है — <em>पहले अधिकार, फिर हस्तांतरण</em>। जब तक भूमि का अधिकार स्पष्ट एवं निर्विवाद न हो, हम उसका हस्तांतरण आगे नहीं बढ़ाते।</p>
-  <p>सनातन परम्परा में भूमि को माता का स्थान प्राप्त है — “माता भूमिः पुत्रोऽहं पृथिव्याः” (अथर्ववेद)। अतः हम भूमि के विक्रय अथवा सौदे की बात नहीं करते; हम उसके हस्तांतरण की बात करते हैं — एक स्वामी से अगले स्वामी तक, स्पष्ट अधिकार के साथ।</p>
+  <p>हमारा सिद्धांत सरल है — पहले अधिकार, फिर हस्तांतरण। हम किसी भूमि के हस्तांतरण में तभी आगे बढ़ते हैं, जब निर्धारित चरणों के अनुसार उसके उपलब्ध अभिलेखों का परीक्षण एवं शासकीय स्रोत से सत्यापन पूर्ण हो जाए, और परीक्षण की सीमा में कोई अस्पष्टता, विसंगति अथवा अनसुलझा प्रश्न शेष न रहे।</p>
+  <p>सनातन परम्परा में भूमि को माता का स्थान प्राप्त है — “माता भूमिः पुत्रोऽहं पृथिव्याः” (अथर्ववेद)। अतः हम भूमि के विक्रय अथवा सौदे की बात नहीं करते; हम उसके हस्तांतरण की बात करते हैं — भू-स्वामी से भावी स्वामी तक।</p>
 
   <h2>परामर्श के क्षेत्र</h2>
   <ul>
@@ -302,20 +304,20 @@
     <li>राजस्व प्रक्रियाएँ, जिनमें नामांतरण एवं Diversion सम्मिलित हैं</li>
     <li>भूमि-हस्तांतरण से पूर्व Due Diligence — भू-स्वामी एवं भावी स्वामी, दोनों हेतु</li>
   </ul>
-  <p>हमारा परामर्श अभिलेखीय है, विधिक राय नहीं; यह स्वामित्व की प्रत्याभूति भी नहीं देता। जहाँ विधिक राय आवश्यक हो, वहाँ हम यह स्पष्ट बताते हैं, और वह अधिवक्ता से ली जानी चाहिए।</p>
+  <p>हमारा परामर्श अभिलेखीय है, विधिक अभिमत नहीं; यह स्वामित्व की प्रत्याभूति भी नहीं देता। जहाँ विधिक अभिमत आवश्यक हो, वहाँ हम यह स्पष्ट बताते हैं, और वह अधिवक्ता से लिया जाना चाहिए।</p>
 
   <h2>आप कौन हैं</h2>
 
   <h3>भू-स्वामी</h3>
   <ul>
-    <li>जब तक अधिकार स्पष्ट न हो, कोई भावी स्वामी प्रस्तुत नहीं किया जाता।</li>
+    <li>Mandate से पूर्व, MP Bhulekh portal पर आपके नाम, भूमि के क्षेत्रफल एवं सह-खातेदारों की प्रविष्टियों का मिलान किया जाता है।</li>
     <li>आपका सम्पर्क-विवरण भावी स्वामी को सीधे नहीं दिया जाता।</li>
     <li>यदि भूमि पहले से अन्य लोगों को दिखाई जा चुकी है, तब भी Mandate सम्भव है; पूर्व-सम्पर्क आरम्भ में ही लिखित रूप में अंकित एवं निर्धारित कर लिए जाते हैं।</li>
   </ul>
 
   <h3>भावी स्वामी</h3>
   <ul>
-    <li>कोई भी भूमि अभिलेख-परीक्षण के उपरांत ही आपके समक्ष लाई जाती है।</li>
+    <li>भूमि आपके समक्ष प्रस्तुत करने से पूर्व स्वामित्व की प्रविष्टियों का प्रारम्भिक मिलान किया जाता है; विस्तृत अभिलेख-परीक्षण आपकी सहमति के पश्चात् होता है। क्या परीक्षित हो चुका है और क्या शेष है, यह आपको स्पष्ट बताया जाता है।</li>
     <li>अभिलेखों का मिलान MP Bhulekh portal एवं जारीकर्ता कार्यालय से किया जाता है।</li>
     <li>अपनी स्थिति हेतु नीचे “अभिलेख-जाँच” देखें।</li>
   </ul>
@@ -345,7 +347,7 @@
   <ul>
     <li>हस्तांतरण के उपरांत भी अस्पष्टता अथवा विवाद सामने आ सकता है — यह असामान्य नहीं।</li>
     <li>पहला चरण है वास्तविक अभिलेखीय स्थिति की निष्पक्ष समीक्षा, पूर्व हस्तांतरणों सहित।</li>
-    <li>यह समीक्षा कोई प्रस्ताव अथवा विधिक राय नहीं; इसका उद्देश्य उचित अगला चरण दिखाना है।</li>
+    <li>यह समीक्षा कोई प्रस्ताव अथवा विधिक अभिमत नहीं; इसका उद्देश्य उचित अगला चरण दिखाना है।</li>
   </ul>
 
   <h2>अभिलेख-जाँच</h2>
@@ -404,7 +406,7 @@
   <h2>आरम्भ कैसे करें</h2>
   <ol>
     <li>दूरभाष, WhatsApp अथवा email से सम्पर्क करें। अपनी स्थिति संक्षेप में बताएँ।</li>
-    <li>हम बताते हैं कि विषय हमारे कार्यक्षेत्र का है या नहीं, और उसमें क्या आवश्यक होगा। यदि नहीं है, तो यह स्पष्ट कह देते हैं।</li>
+    <li>हम बताते हैं कि विषय हमारे कार्यक्षेत्र का है अथवा नहीं, और उसमें क्या आवश्यक होगा। यदि नहीं है, तो यह स्पष्ट कह देते हैं।</li>
     <li>प्रारम्भिक परीक्षण किन अभिलेखों से आरम्भ होगा, यह स्पष्ट किया जाता है।</li>
     <li>कार्य की सीमा एवं शुल्क Mandate में लिखित रूप से निर्धारित होते हैं। इसके बिना कोई परामर्श औपचारिक रूप से आगे नहीं बढ़ता।</li>
     <li>आपसे कोई अभिलेख लेने से पूर्व उसकी लिखित सूचना दी जाती है।</li>
@@ -433,7 +435,7 @@
   </details>
   <details>
     <summary>यदि मेरे अभिलेखों में कोई अपूर्णता हो तो?</summary>
-    <p>पहले उस अपूर्णता की पहचान की जाती है। जब तक स्थिति स्पष्ट न हो, कोई भावी स्वामी प्रस्तुत नहीं किया जाता — यह आपकी सुरक्षा है, बाधा नहीं।</p>
+    <p>पहले उस अपूर्णता की पहचान की जाती है, और आगे का मार्ग उसी के अनुसार निर्धारित होता है — यह आपकी सुरक्षा है, बाधा नहीं।</p>
   </details>
 
   <p class="faq-group">प्रक्रिया</p>
@@ -443,7 +445,7 @@
   </details>
   <details>
     <summary>क्या मुझे बार-बार आना पड़ेगा?</summary>
-    <p>अधिकांश संवाद दूरभाष पर सम्भव है। प्रत्यक्ष भेंट केवल हस्ताक्षर एवं महत्वपूर्ण चरणों में आवश्यक होती है — आपकी ही सुरक्षा हेतु।</p>
+    <p>अधिकांश संवाद दूरभाष पर सम्भव है। प्रत्यक्ष भेंट केवल हस्ताक्षर एवं महत्त्वपूर्ण चरणों में आवश्यक होती है — आपकी ही सुरक्षा हेतु।</p>
   </details>
 
   <p class="faq-group">पारिवारिक स्वामित्व एवं प्राधिकार</p>
